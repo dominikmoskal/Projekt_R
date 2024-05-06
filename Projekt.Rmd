@@ -1,0 +1,36 @@
+---
+title: "Projekt - Prognozowanie i symulacja zjawisk gospodarczych"
+author: "Dominik Moskal, Michał Bysiewicz, Paulina Jasińska"
+date: "2024-05-06"
+output: pdf_document
+---
+
+# Wprowadzenie danych
+```{r echo=FALSE, message=TRUE, warning=FALSE}
+setwd("C:/Users/Demas/Desktop/Prognozowanie_zjawisk_społeczno-gospodarczych")
+data <- read.csv("Dane_wskazniki.csv", sep = ";")
+```
+# Zbiór 1
+```{r}
+z1 <- data.frame(data$Data,data$Wydatki.budżetu.państwa)
+colnames(z1) <- c("Data", "Wydatki budżetu państwa")
+head(z1, n=10)
+```
+# Zbiór 2
+```{r}
+z2 <- data.frame(data$Data,data$Bezrobotni.zarejestrowani)
+colnames(z2) <- c("Data", "Bezrobotni zarejestrowani")
+head(z2, n=10)
+```
+# Zbiór 3
+```{r}
+z3 <- data.frame(data$Data,data$Przeciętna.miesięczna.nominalna.emerytura.i.renta)
+colnames(z3) <- c("Data", "Przeciętna miesięczna nominalna emerytura i renta")
+head(z3, n=10)
+```
+# Zbiór 4
+```{r}
+z4 <- data.frame(data$Data,data$Mieszkania.oddane.do.użytkowania)
+colnames(z4) <- c("Data", "Mieszkania oddane do użytkowania")
+head(z4, n=10)
+```
